@@ -24,7 +24,7 @@ app.route('/').get((req, res) => {
   res.send('<h1>oOutput(Mockup)</h1>')
 })
 
-app.use('/twitter', twitterRouter)
+app.use('/crowdFlow', twitterRouter)
 
 //Swagger
 app.use('/swagger', swaggerPath)

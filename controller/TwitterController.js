@@ -4,9 +4,9 @@ import * as TwitterService from '../service/TwitterService'
 
 let twitterRouter = express.Router()
 
-twitterRouter.route('/all').get((req, res) => {
-  TwitterService.mockupOutput().then(output => {
-    res.send({sentiments: output})
+twitterRouter.route('/current/density').get((req, res) => {
+  TwitterService.getCurrentDensity(req.location).then(output => {
+    res.send(output)
   })
 })
 
