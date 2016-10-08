@@ -10,4 +10,14 @@ twitterRouter.route('/current/density').get((req, res) => {
   })
 })
 
+twitterRouter.route('/predict/nextTime').get((req, res) => {
+    res.send("under construction")
+  
+})
+
+twitterRouter.route('/predict/nextPlace').get((req, res) => {
+    res.send("under construction")
+
+})
+
 export default twitterRouter
