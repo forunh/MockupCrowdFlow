@@ -5,11 +5,11 @@
     "title": "Mockup Output",
     "description": "All things you can use in this API"
   },
-  "basePath": "/twitter",
+  "basePath": "/crowdFlow",
   "tags" : [
     {
-      "name": "Twitter",
-      "description": "Mockup output for Twitter"
+      "name": "crowdFlow",
+      "description": "Mockup output for crowd Flow Prediction System"
     }
   ],
   "schemes": [
@@ -22,10 +22,40 @@
     "application/json"
   ],
   "paths": {
-    "/all": {
+    "/current/density": {
       "get":{
-        "tags": [ "Twitter"],
-        "description": "This is random output data",
+        "tags": [ "Current Density level"],
+        "description": "current density level of the place",
+        "operationId": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "response"
+          }
+        }
+      }
+    },
+    "/predict/changingDensity": {
+      "get":{
+        "tags": [ "Changing of the Density"],
+        "description": "changing of the density level of the place",
+        "operationId": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "response"
+          }
+        }
+      }
+    },
+    "/predict/nextPlace": {
+      "get":{
+        "tags": [ "Next place going"],
+        "description": "Next top 3 place people from the current place will going",
         "operationId": "",
         "produces": [
           "application/json"
@@ -38,6 +68,7 @@
       }
     }
   },
+  
   "definitions": {
     "create": {
       "properties": {
